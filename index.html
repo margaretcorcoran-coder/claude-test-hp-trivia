@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hogwarts Trivia Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header class="site-header">
+    <h1>⚡ Hogwarts Trivia Challenge ⚡</h1>
+    <p class="tagline">Answer questions, earn points, and bring glory to your house!</p>
+  </header>
+
+  <main id="app">
+
+    <!-- SETUP SCREEN -->
+    <section id="screen-setup" class="screen active">
+      <div class="card">
+        <h2>Enter the Great Hall</h2>
+        <p class="subtitle">Add each player's name, then get Sorted!</p>
+
+        <div id="player-inputs" class="player-inputs"></div>
+
+        <div class="setup-buttons">
+          <button id="add-player-btn" class="btn btn-secondary" type="button">+ Add Player</button>
+          <button id="remove-player-btn" class="btn btn-secondary" type="button">− Remove Player</button>
+        </div>
+
+        <button id="sort-btn" class="btn btn-primary btn-large" type="button">🎩 Sort Us Into Houses!</button>
+        <p id="setup-error" class="error-text"></p>
+      </div>
+    </section>
+
+    <!-- SORTING SCREEN -->
+    <section id="screen-sorting" class="screen">
+      <div class="card sorting-card">
+        <h2>The Sorting Hat is Deciding...</h2>
+        <div class="hat">🎩</div>
+        <div id="sorting-status" class="sorting-status"></div>
+        <div id="sorted-results" class="sorted-results"></div>
+        <button id="continue-to-game-btn" class="btn btn-primary btn-large hidden" type="button">Begin the Challenge!</button>
+      </div>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section id="screen-game" class="screen">
+      <div class="game-layout">
+        <aside class="scoreboard" id="scoreboard">
+          <h3>Scoreboard</h3>
+          <ul id="scoreboard-list"></ul>
+        </aside>
+
+        <div class="card question-card">
+          <div class="progress-row">
+            <span id="question-counter">Question 1 of 16</span>
+            <span id="current-turn" class="current-turn-badge"></span>
+          </div>
+
+          <div class="points-badge" id="points-badge"></div>
+
+          <h2 id="question-text">Question text goes here</h2>
+
+          <div id="answers-container" class="answers-container"></div>
+
+          <div id="feedback" class="feedback hidden"></div>
+
+          <button id="next-question-btn" class="btn btn-primary hidden" type="button">Next Question →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS SCREEN -->
+    <section id="screen-results" class="screen">
+      <div class="card">
+        <h2 id="results-title">🏆 Final Results 🏆</h2>
+        <div id="winner-banner" class="winner-banner"></div>
+        <div id="house-cup" class="house-cup"></div>
+        <ul id="final-scores" class="final-scores"></ul>
+        <button id="play-again-btn" class="btn btn-primary btn-large" type="button">Play Again</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Made for magical family game night ✨</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
