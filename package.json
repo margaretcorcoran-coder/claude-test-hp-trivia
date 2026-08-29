@@ -1,0 +1,13 @@
+{
+  "name": "claude-test-hp-trivia",
+  "version": "1.0.0",
+  "description": "Test hp trivia test",
+  "main": "src/trivia.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
