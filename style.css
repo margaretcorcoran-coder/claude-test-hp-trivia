@@ -126,6 +126,7 @@ main#app {
 
 .player-input-row input {
   flex: 1;
+  min-width: 0;
   padding: 0.65rem 1rem;
   border-radius: 8px;
   border: 2px solid var(--gold);
@@ -259,6 +260,24 @@ main#app {
 @media (max-width: 720px) {
   .game-layout {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .player-input-row {
+    flex-wrap: wrap;
+  }
+
+  .player-input-row label {
+    min-width: auto;
+  }
+
+  .player-input-row input {
+    flex-basis: 100%;
   }
 }
 
